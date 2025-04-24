@@ -1,5 +1,8 @@
 from dagster import Definitions, ScheduleDefinition, load_assets_from_modules
+from music_pipeline import assets
 from music_pipeline.jobs.data_pipeline import music_data_pipeline
+
+all_assets = load_assets_from_modules([assets])
 
 music_pipeline_schedule = ScheduleDefinition(
     job=music_data_pipeline,
@@ -8,6 +11,7 @@ music_pipeline_schedule = ScheduleDefinition(
 )
 
 defs = Definitions(
+    assets=all_assets,
     jobs=[music_data_pipeline],
     schedules=[music_pipeline_schedule]
 )

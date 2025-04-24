@@ -1,1 +1,3 @@
 venv/
+.tmp_dagster_home_*
+__pycache__/
