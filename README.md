@@ -102,6 +102,62 @@ Execute the following command:
 python scraper.py
 ```
 
+### 3️⃣ Run Dagster
+Execute the following command:
+```sh
+dagster dev
+```
+
+### 4️⃣ Run Dagster Job
+- After heading to the dagster interface (http://127.0.0.1:3000), click on the `music_data_pipeline` job and go to the `Launchpad`
+- The job will start running after clicking the `Launch Run` button.
+- A `merged_data.csv` file will be saved in the current project directory
+
+---
+
+## 📘 Code Documentation
+
+This section provides a quick overview of the key Python functions used in the scraping pipeline and their purposes.
+
+### `lastfm_scraper.py`
+
+```python
+def scrape_weekly_charts() -> pd.DataFrame:
+    """
+    Scrapes weekly top chart data from Last.fm.
+
+    Returns:
+        pd.DataFrame: A DataFrame containing artist, track, and ranking information.
+    """
+```
+### `kworb_scraper.py`
+
+```python
+def scrape_kworb_charts() -> pd.DataFrame:
+    """
+    Scrapes top chart data from Kworb.net.
+
+    Returns:
+        pd.DataFrame: A DataFrame of top songs and relevant metadata.
+    """
+```
+
+### `data_pipeline.py`
+```python
+def music_data_pipeline():
+    """
+    Dagster job that coordinates scraping from both sources
+    and processes the data into unified tables.
+    """
+```
+
+### `daily_schedule.py`
+```python
+    """
+    Dagster scheduler that coordinates what time the
+    job is to be executed.
+    """
+```
 
 ## 🤝 Contributions
 Feel free to fork the repo, submit PRs, or open issues! 😊
