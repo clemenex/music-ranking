@@ -117,7 +117,7 @@ dagster dev
 
 ## 📘 Code Documentation
 
-This section provides a quick overview of the key Python functions used in the scraping pipeline and their purposes.
+This section provides a quick overview of the key Python functions used in the scraping pipeline and their purposes. For more details, you may open each specific file inside this repository to view the source code.
 
 ### `lastfm_scraper.py`
 
