@@ -1,4 +1,4 @@
-# Goodreads Genre-Based Book Scraper
+# Last.fm & Kworb Artist-Based Charts Scraper
 
 ## 📌 Overview
 This project gathers artist popularity data from Last.fm and song performance data from Kworb.net, then merges the results to identify artists whose songs are currently charting on Kworb. It enables cross-platform musical trend analysis by showing which Last.fm chart-topping artists also have popular songs across global digital platforms.
